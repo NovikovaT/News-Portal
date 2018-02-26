@@ -1,6 +1,6 @@
 # News-Portal
 
-Project's technologies:
+## Project's technologies:
 - Request for the weaher
 - Request for the exchange rate
 - Modal Windows
@@ -9,10 +9,10 @@ Project's technologies:
 - Loading of the news
 - Sliders
 - Accordions
-- Cookie timer
+- Cookie timer for baners
 - Search
 - Burger menu
 
-Shalukhina Tanya
-Skype: tnovikovaw3@gmail.com
-Email: testgoeshere@gmail.com
+**Developer:** Shalukhina Tanya
+**Skype:** tnovikovaw3@gmail.com
+**Email:** testgoeshere@gmail.com
