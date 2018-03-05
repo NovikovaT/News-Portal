@@ -1,11 +1,36 @@
+let sliderCount = 0;
 document.addEventListener('DOMContentLoaded', function(){
-	var arr = ['https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Download-Free-HD-Wallpapers-Backgrounds-Desktop-PIC-WPD0012451.jpg', 'http://www.qygjxz.com/data/out/250/3920931-wallpapers-free-download.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP48z2VhFoBLcH6zpsMvXzVhsCLT5os0KM1ROjnsbVL7cKoJDr', 'http://markinternational.info/data/out/585/224060027-free-images-download.jpg'];
+	let arr = [
+		'http://ffcu.io/wp-content/uploads/2015/12/msp_1405_1378.jpg',
+		'https://cdn.pixabay.com/photo/2016/08/31/17/41/sunrise-1634197_960_720.jpg',
+		'https://www.hd-wallpapersdownload.com/script/bulk-upload/stock-photos-for-free-use-hd-wallpaper.jpg',
+		'https://thumbor.forbes.com/thumbor/960x0/smart/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1005983644%2F960x0.jpg%3Ffit%3Dscale'
+	];
 
-	var item = document.querySelectorAll('.slider-content');
-	var next = document.querySelectorAll('.right-button');
-	var i = 0;
+	let slider = document.getElementsByClassName('slider-wrapper');
+	let rightButton = document.getElementById('right-button');
+	let leftButton = document.getElementById('left-button');
 
-	next.addEventListener('click', function() {
+	rightButton.addEventListener('click', function() {
+		if (sliderCount==arr.length - 1) {
+			sliderCount=0;
+		} else {
+			sliderCount++;
+		};
+		
+		let img = document.getElementById('img');
+		img.src = arr[sliderCount];
+		
+	});
+	
+	leftButton.addEventListener('click', function() {
+		if (sliderCount == 0) {
+			sliderCount = arr.length - 1;
+		} else {
+			sliderCount--;
+		};
 
+		let img = document.getElementById('img');
+		img.src = arr[sliderCount];
 	});
 });

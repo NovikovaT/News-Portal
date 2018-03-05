@@ -51,7 +51,11 @@ body {
 	width: 800px;
 	min-height: 300px;
 }
-.slider-body {position: relative;}
+.slider-body {
+	position: relative;
+	max-height: 532px;
+	overflow: hidden;
+}
 img.slider-content {
 	width: 100%;
 	height: auto;
@@ -64,6 +68,8 @@ img.slider-content {
 	bottom: 0;
 	width: 40px;
 	background: rgba(0,0,0,.6);
+	cursor: pointer;
+	transition: opacity .35s;
 }
 .left-button {left: 0;}
 .right-button {right: 0;}
@@ -85,6 +91,10 @@ img.slider-content {
 .right-button:before {
 	content: '>'
 }
+.left-button:hover,
+.right-button:hover {
+	opacity: .7;
+}
 .slider-bottom {
 	text-align: center;
 	font-size: 0;
@@ -103,4 +113,9 @@ img.slider-content {
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
+	cursor: pointer;
+	transition: opacity .35s;
+}
+.slider-bottom li:hover {
+	opacity: .7;
 }
